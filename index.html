@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailerFlix</title>
+
+    <!-- Link para a fonte Alfa Slab One do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Organiza os vídeos na vertical */
+            margin: 0;
+            background-color: #320b0b; /* Cor de fundo */
+            color: #fff;
+            padding-top: 20px;
+            align-items: center; /* Alinha os elementos ao centro */
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            font-family: 'Alfa Slab One', cursive; /* Fonte estilosa */
+            font-size: 4em; /* Aumenta o tamanho da fonte */
+            font-weight: bold;
+            color: #fff; /* Texto branco */
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+        }
+
+        /* Estilo para o vídeo principal */
+        .main-video {
+            width: 100%;
+            max-width: 640px;
+            height: 360px;
+            object-fit: cover;
+            margin: 20px 0; /* Margem entre o vídeo principal e os outros vídeos */
+            border: 5px solid #d4b42d; /* Borda amarela */
+            transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+        }
+
+        /* Estilo para os vídeos menores */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os vídeos menores */
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin-bottom: 40px; /* Espaço após cada grupo de vídeos */
+        }
+
+        /* Estilo para os iframes dos vídeos menores */
+        .video-container iframe {
+            width: 45%; /* Largura de cada vídeo pequeno */
+            height: 250px; /* Altura fixa para os vídeos menores */
+            object-fit: cover;
+            margin-bottom: 20px; /* Espaço entre os vídeos dentro da linha */
+            border: 5px solid #d4b42d; /* Borda amarela */
+            transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+        }
+
+        /* Efeito de zoom ao passar o mouse pelos vídeos */
+        .main-video:hover, 
+        .video-container iframe:hover {
+            transform: scale(1.1); /* Aumenta o tamanho em 10% */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho centralizado -->
+    <header>TrailerFlix</header>
+
+    <!-- Exibe o vídeo principal -->
+    <iframe class="main-video" src="https://www.youtube.com/embed/TXPkr5HcvBs" title="YouTube video player" allowfullscreen></iframe>
+
+    <!-- Container para os vídeos menores -->
+    <div class="video-container">
+        <!-- Vídeos menores -->
+        <iframe src="https://www.youtube.com/embed/3ttBrGSEf6A" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/yAZxx8t9zig" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dEbe0rS4Z2A" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/kJwjHN7XllY" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
